@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BriefcaseMedical, Building2, FlaskConical } from "lucide-react";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 
 export default function Divisions() {
   return (
@@ -24,7 +24,7 @@ export default function Divisions() {
               <FlaskConical className="w-5 h-5 mr-2" /> Pharmacy
             </TabsTrigger>
             <TabsTrigger value="corporate" className="py-4 text-base data-[state=active]:bg-secondary data-[state=active]:text-white rounded-lg transition-all">
-              <Link href="/services" className="flex items-center w-full h-full justify-center">
+              <Link to="/services" className="flex items-center w-full h-full justify-center">
                 <Building2 className="w-5 h-5 mr-2" /> Services
               </Link>
             </TabsTrigger>

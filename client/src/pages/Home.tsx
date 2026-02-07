@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { 
   ArrowRight, Activity, Users, Handshake, 
   Stethoscope, Pill, Camera, CheckCircle 
@@ -166,7 +166,7 @@ export default function Home() {
               }
             ].map((item, i) => (
               item.title === "Services" ? (
-                <Link href="/services" key={i}>
+                <Link to="/services" key={i}>
                   <motion.div
                     whileHover={{ y: -5, scale: 1.02 }}
                     className="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer shadow-lg"

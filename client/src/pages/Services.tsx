@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bone, Heart, Activity, Monitor, Wind, Snowflake, Dumbbell, Pill, Tablet, TestTube, Home, Scissors, Shield, Baby, Ambulance } from "lucide-react";
 
@@ -152,7 +152,7 @@ export default function Services() {
                 ))}
               </ul>
 
-              <Link href="/contact">
+              <Link to="/contact">
                 <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all text-sm">
                   Inquire Now
                 </Button>
@@ -170,7 +170,7 @@ export default function Services() {
           <p className="text-blue-50 text-lg mb-8 max-w-2xl mx-auto relative z-10">
             Our team of experts can help design and implement bespoke medical solutions for your facility.
           </p>
-          <Link href="/contact">
+          <Link to="/contact">
             <Button size="lg" className="bg-white text-secondary hover:bg-blue-50 font-bold px-10 py-6 rounded-xl shadow-lg relative z-10">
               Contact our Experts <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

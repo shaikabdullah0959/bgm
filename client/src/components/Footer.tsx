@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
@@ -25,9 +25,9 @@ export function Footer() {
             </p>
             <div className="flex gap-4 pt-4">
               {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300">
+                <Link to="#" key={i} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:scale-110 transition-all duration-300">
                   <Icon className="w-4 h-4 text-white" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -37,31 +37,31 @@ export function Footer() {
             <h3 className="font-display font-semibold text-lg mb-6 text-white">Quick Links</h3>
             <ul className="space-y-3 text-sm text-white/70">
               <li>
-                <Link href="/" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
+                <Link to="/" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary/50"></span>
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
+                <Link to="/about" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary/50"></span>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
+                <Link to="/services" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary/50"></span>
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/divisions" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
+                <Link to="/divisions" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary/50"></span>
                   Divisions
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
+                <Link to="/team" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary/50"></span>
                   Our Team
                 </Link>
