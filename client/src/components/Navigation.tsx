@@ -67,17 +67,6 @@ export function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              {/* <div className="ml-4 pl-4 border-l border-gray-200">
-                 <Link href="/contact">
-                  <Button 
-                    variant={scrolled || location.pathname !== "/" ? "default" : "secondary"}
-                    size="sm"
-                    className="rounded-full px-6 shadow-md hover:shadow-lg transition-all"
-                  >
-                    Get in Touch
-                  </Button>
-                 </Link>
-              </div> */}
             </nav>
 
             {/* Mobile Menu Button */}
