@@ -1,6 +1,6 @@
 {
   "functions": {
-    "client/api/**/*.ts": {
+    "api/**/*.ts": {
       "runtime": "nodejs18.x"
     }
   },
@@ -11,7 +11,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/"
     }
   ]
 }
