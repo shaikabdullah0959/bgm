@@ -1,6 +1,8 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/public",
   "functions": {
-    "client/api/**/*.ts": {
+    "api/contact.ts": {
       "runtime": "nodejs18.x"
     }
   },
