@@ -221,19 +221,28 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-center font-medium uppercase tracking-widest mb-12" style={{ color: '#154679', fontWeight: 1000 }}>Trusted Partners & Brands</h3>
           <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-12 transition-all duration-500">
-            {brands.map((brand) => (
-              <div key={brand.id} className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[120px]">
+            {brands.map((brand, index) => (
+              <motion.div
+                key={brand.id}
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 w-32 h-24 border"
+                style={{ borderColor: '#2598E4' }}
+                whileHover={{ y: -5, boxShadow: '0 10px 25px rgba(37, 152, 228, 0.15)' }}
+              >
                 <img 
                   src={brand.image} 
                   alt={brand.name}
-                  className="max-h-20 max-w-32 object-contain transition-all duration-300"
+                  className="max-h-16 max-w-28 object-contain transition-all duration-300"
                   onError={(e) => {
                     console.error(`Failed to load image: ${brand.image}`);
                     e.currentTarget.style.display = 'none';
                   }}
                   loading="lazy"
                 />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
