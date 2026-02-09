@@ -8,10 +8,22 @@ export default function Divisions() {
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       <div className="bg-primary pt-32 pb-20 px-4 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Our Divisions</h1>
-        <p className="text-blue-100 max-w-2xl mx-auto text-lg">
+        <motion.h1 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-4xl md:text-5xl font-display font-bold mb-4"
+        >
+          Our Divisions
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="text-lg text-blue-100 max-w-2xl mx-auto"
+        >
           Structured specialized units focusing on key areas of the healthcare industry.
-        </p>
+        </motion.p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10">
@@ -31,11 +43,6 @@ export default function Divisions() {
           </TabsList>
 
           <TabsContent value="medical">
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            >
               <div className="space-y-6">
                 <h2 className="text-3xl font-display font-bold text-primary">Medical Projects Division</h2>
                 <p className="text-muted-foreground leading-relaxed text-lg">
@@ -57,15 +64,9 @@ export default function Divisions() {
                    className="w-full h-full object-cover"
                  />
               </div>
-            </motion.div>
           </TabsContent>
 
           <TabsContent value="pharmacy">
-             <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            >
                <div className="h-[400px] rounded-2xl overflow-hidden shadow-xl order-2 md:order-1">
                  <img 
                    src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=1000&auto=format&fit=crop" 
@@ -93,7 +94,6 @@ export default function Divisions() {
                   </Card>
                  </div>
               </div>
-            </motion.div>
           </TabsContent>
 
           <TabsContent value="corporate">

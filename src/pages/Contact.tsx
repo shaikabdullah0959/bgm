@@ -72,7 +72,7 @@ export default function Contact() {
           <div className="w-full h-full bg-gray-100 rounded-xl flex items-center justify-center text-muted-foreground">
             {/* Embed Google Map here */}
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.992209669534!2d47.9774!3d29.3759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf849023456789%3A0xabcdef0123456789!2sSalmiya%2C%20Kuwait!5e0!3m2!1sen!2skw!4v1620000000000!5m2!1sen!2skw" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3478.139684813432!2d48.052054299999995!3d29.336901799999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf9da5c3a3d3df%3A0x3fda9e3f8f69be08!2s106-118%20Baghdad%20St%2C%20Salmiya%2020009%2C%20Kuwait!5e0!3m2!1sen!2sin!4v1764435816691!5m2!1sen!2sin"
               width="100%" 
               height="100%" 
               style={{ border: 0, borderRadius: '0.75rem' }} 

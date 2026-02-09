@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, Printer } from "lucide-react";
 
 export function Footer() {
   return (
@@ -66,6 +66,18 @@ export function Footer() {
                   Our Team
                 </Link>
               </li>
+              <li>
+                <Link to="/news" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-secondary/50"></span>
+                  News & Events
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="hover:text-secondary hover:pl-2 transition-all duration-300 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-secondary/50"></span>
+                  Careers
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -92,8 +104,12 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 group">
                 <Phone className="w-5 h-5 text-secondary shrink-0 group-hover:rotate-12 transition-transform" />
-                <span>+965 25710736</span>
+                <span>+965 22390111</span>
               </li>
+              <li className="flex items-center gap-3 group">
+                <Printer className="w-5 h-5 text-secondary shrink-0 group-hover:rotate-12 transition-transform" />
+                <span>+965 25710736</span>
+              </li> 
               <li className="flex items-center gap-3 group">
                 <Mail className="w-5 h-5 text-secondary shrink-0 group-hover:scale-110 transition-transform" />
                 <span>info@boushahrigm.com</span>

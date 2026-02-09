@@ -32,10 +32,22 @@ export default function Team() {
   return (
     <div className="min-h-screen bg-white">
       <div className="bg-primary pt-32 pb-20 px-4 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">Leadership Team</h1>
-        <p className="text-blue-100 max-w-2xl mx-auto text-lg">
+        <motion.h1 
+          initial={{ opacity: 0, y: 30, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-4"
+        >
+          Leadership Team
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0, y: 20, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+          className="text-lg text-blue-100 max-w-2xl mx-auto"
+        >
           Meet the experts driving innovation and quality at Boushahri Group Medical.
-        </p>
+        </motion.p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

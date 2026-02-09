@@ -114,14 +114,27 @@ const services = [
 export default function Services() {
   return (
     <div className="bg-muted/30 min-h-screen">
-      <div className="bg-primary text-white py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">Our Services</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary/10 to-primary">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/90" />
+        <div className="relative z-10 text-center max-w-4xl px-4">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-4xl md:text-5xl font-display font-bold text-white leading-tight mb-4"
+          >
+            Our Services
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-lg text-blue-100 max-w-2xl mx-auto"
+          >
             Comprehensive healthcare solutions tailored to meet the evolving needs of the medical sector.
-          </p>
+          </motion.p>
         </div>
-      </div>
+      </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -145,7 +158,7 @@ export default function Services() {
 
               <ul className="space-y-2 mb-8 border-t border-gray-100 pt-6">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-xs text-gray-600">
+                  <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
                     {feature}
                   </li>
@@ -153,7 +166,7 @@ export default function Services() {
               </ul>
 
               <Link to="/contact">
-                <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all text-sm">
+                <Button variant="outline" className="w-full text-sm">
                   Inquire Now
                 </Button>
               </Link>

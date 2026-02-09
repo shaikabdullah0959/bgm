@@ -14,6 +14,8 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Divisions from "./pages/Divisions";
 import Team from "./pages/Team";
+import News from "./pages/News";
+import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/not-found";
 
@@ -33,6 +35,8 @@ function Router() {
       <Route path="/services" element={<Services />} />
       <Route path="/divisions" element={<Divisions />} />
       <Route path="/team" element={<Team />} />
+      <Route path="/careers" element={<Careers />} />
+      <Route path="/news" element={<News />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

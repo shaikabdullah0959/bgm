@@ -24,7 +24,14 @@ export default function About() {
           >
             History Of Boushahri Group
           </motion.h1>
+           <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-lg text-blue-100 max-w-2xl mx-auto"
+          >
           <p className="text-xl" style={{ color: '#2598E4' }}>Pioneering Excellence in Healthcare Since 1978</p>
+          </motion.p>
         </div>
       </section>
 

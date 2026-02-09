@@ -222,11 +222,16 @@ export default function Home() {
           <h3 className="text-center font-medium uppercase tracking-widest mb-12" style={{ color: '#154679', fontWeight: 1000 }}>Trusted Partners & Brands</h3>
           <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-12 transition-all duration-500">
             {brands.map((brand) => (
-              <div key={brand.id} className="flex items-center justify-center">
+              <div key={brand.id} className="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[120px]">
                 <img 
                   src={brand.image} 
                   alt={brand.name}
-                  className="max-h-24 object-contain transition-all duration-300"
+                  className="max-h-20 max-w-32 object-contain transition-all duration-300"
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${brand.image}`);
+                    e.currentTarget.style.display = 'none';
+                  }}
+                  loading="lazy"
                 />
               </div>
             ))}
